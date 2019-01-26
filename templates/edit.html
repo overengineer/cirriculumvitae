@@ -19,16 +19,17 @@
     <div class="error">{{ error }}</div>
     <div class="message">{{ message }}</div>
     <input type="button" class="arrow" onclick="toggle_panel(this,'hide')" value="&#x25B2">
+    <input type="button" class="button" style="float:right" onclick="window.print();return false;" value="print" />
     <form action="/edit" method="POST">
+        <input type="submit" value="render" class="button" style="float:right">
         <div id="hide">
             <input type="hidden" method="GET" value="1">
             <div class="explanation">paste json content here</div>
             <textarea name="data" class="data" placeholder="paste json content here" required>
 {{ json }}
 </textarea>
-            <input type="submit" value="render" class="button">
+        </div>
     </form>
-</div>
 </div>
 
 <div class="view">
