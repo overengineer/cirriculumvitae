@@ -25,8 +25,8 @@ textarea {
     left: 0;
     right: 0;
     height: 30vh;
-    max-width: 835px;
-    min-width: 835px;
+    max-width: 100%;
+    min-width: 100%;
     color: green;
 }
 
