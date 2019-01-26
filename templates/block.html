@@ -1,0 +1,13 @@
+{% macro render_block(item) %}
+<div class="cls_container">
+    <div class="cls_item">
+        <span class="cls_section">{{item.title}}</span>
+    </div>
+    {% from item.macro import render %}
+
+    {% for child in item.content %}
+    {{ render(child) }}
+    {% endfor %}
+
+</div>
+{% endmacro %}

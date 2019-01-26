@@ -1,0 +1,11 @@
+{% macro render(item) %}
+<div class="cls_item"><span class="cls_experience">{{ item.category }}</span></div>
+{% from "macros.html" import iter as iter %}
+{% for box in item.boxes %}
+<div class="cls_boxes">
+    {% for skill in box %}
+    <span class="cls_skill">{{ skill }}</span>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endmacro %}

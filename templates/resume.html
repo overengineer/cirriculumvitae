@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/styles/resume.css">
+</head>
+
+
+<body>
+    {% include "header.html" %}
+    <div class="row" style="padding-bottom:18px;">
+        {% from "block.html" import render_block %}
+        <div class="column">
+            {% for item in left %}
+            {{ render_block(item) }}
+            {% endfor %}
+        </div>
+        <div class="column">
+            {% for item in right %}
+            {{ render_block(item) }}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

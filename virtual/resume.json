@@ -1,0 +1,250 @@
+{
+  "image": "https://media.licdn.com/dms/image/C4D03AQHy-1GBQafQgA/profile-displayphoto-shrink_200_200/0?e=1551916800&v=beta&t=QqPMf6EaOQ16VMr7aRfM2FKcXBkM2_evMfdmFgAO1do",
+  "name": "Alper Said Soylu",
+  "title": [
+    "Senior Student at ",
+    " Electronics and Communication Engineering ",
+    " ITU"
+  ],
+  "vision": [
+    "I am an engineer candidate experienced embedded development with participation in real engineering projects in internships and student team projects"
+  ],
+  "contacts": [
+    {
+      "link": "https://overengineer.github.io",
+      "text": "overengineer.github.io",
+      "icon": "https://img.icons8.com/ios-glyphs/30/000000/geography.png"
+    },
+    {
+      "link": "https://www.github.com/overengineer",
+      "text": "/overengineer",
+      "icon": "https://img.icons8.com/ios-glyphs/30/000000/github.png"
+    },
+    {
+      "link": "https://www.gitlab.com/alpersaidsoylu",
+      "text": "/alpersaidsoylu",
+      "icon": "https://img.icons8.com/windows/32/000000/gitlab.png"
+    },
+    {
+      "link": "https://www.linkedin.com/alpersaidsoylu",
+      "text": "/alpersaidsoylu",
+      "icon": "https://img.icons8.com/ios-glyphs/30/000000/linkedin.png"
+    },
+    {
+      "link": "mailto:54alpersaid@gmail.com",
+      "text": "54alpersaid@gmail.com",
+      "icon": "https://img.icons8.com/ios-glyphs/30/000000/gmail.png"
+    },
+    {
+      "link": "tel:+905423376727",
+      "text": "+905423376727",
+      "icon": "https://img.icons8.com/ios-glyphs/30/000000/iphone.png"
+    }
+  ],
+  "left": [
+    {
+      "title": "EDUCATION",
+      "macro": "experience.html",
+      "content": [
+        {
+          "title": "Undergraduate",
+          "institution": "Istanbul Technical University",
+          "description": "Electronics and Communication Engineering",
+          "detail": "2018"
+        }
+      ]
+    },
+    {
+      "title": "EXPERIENCE",
+      "macro": "experience.html",
+      "content": [
+        {
+          "title": "Intern",
+          "institution": "Profen Group",
+          "description": "I have experienced embedded system development, I have designed digital signal processing systems on FPGAs",
+          "detail": "2018"
+        },
+        {
+          "title": "Intern",
+          "institution": "GSTL, ITU",
+          "description": "ITU Embedded System Design Lab, I have experienced on digital system design with FPGAs",
+          "detail": "2018"
+        },
+        {
+          "title": "Intern",
+          "institution": "Arvasis Inc.",
+          "description": "I have studied Java Language and basics of image processing and machine learning",
+          "detail": "2017"
+        }
+      ]
+    },
+    {
+      "title": "SKILLS",
+      "macro": "skills.html",
+      "content": [
+        {
+          "category": "Fields",
+          "boxes": [
+            [
+              "Embedded System Development",
+              "Digital System Design"
+            ],
+            [
+              "FPGAs",
+              "Microprocessors",
+              "Antenna Design"
+            ],
+            [
+              "Machine Learning",
+              "Image Processing"
+            ]
+          ]
+        },
+        {
+          "category": "Programming Languages",
+          "boxes": [
+            [
+              "C",
+              "C++",
+              "C#",
+              "Java",
+              "Python",
+              "JavaScript"
+            ],
+            [
+              "Bash",
+              "Matlab Language",
+              "Assembly Programming"
+            ]
+          ]
+        },
+        {
+          "category": "Hardware Description Languages",
+          "boxes": [
+            [
+              "Verilog",
+              "VHDL"
+            ]
+          ]
+        },
+        {
+          "category": "Engineering Software",
+          "boxes": [
+            [
+              "Matlab",
+              "Xilinx Vivado",
+              "Xilinx ISE",
+              "HFSS"
+            ],
+            [
+              "Linux",
+              "Git"
+            ]
+          ]
+        },
+        {
+          "category": "Office & Design Tools",
+          "boxes": [
+            [
+              "Microsoft Office",
+              "LaTeX",
+              "HTML",
+              "CSS",
+              "Markdown",
+              "Jinja"
+            ]
+          ]
+        },
+        {
+          "category": "Soft Skills",
+          "boxes": [
+            [
+              "Team Work",
+              "Project Management"
+            ],
+            [
+              "Presentation",
+              "Academic Writing"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LANGUAGES",
+      "macro": "languages.html",
+      "content": [
+        {
+          "language": "Turkish",
+          "description": "Native"
+        },
+        {
+          "language": "English",
+          "description": "Academic reading-writing, fluency at speaking"
+        }
+      ]
+    }
+  ],
+  "right": [
+    {
+      "title": "AREAS OF INTEREST",
+      "macro": "areas.html",
+      "content": [
+        {
+          "title": "Embedded Systems",
+          "detail": "Microprocessor System Design, FPGA prototyping"
+        },
+        {
+          "title": "Electromagnetics",
+          "detail": "Antenna Design, Medical Imaging"
+        },
+        {
+          "title": "Artificial Intelligence",
+          "detail": "Computer Vision, Machine Learning, Deep Learning, CNN"
+        }
+      ]
+    },
+    {
+      "title": "PROJECTS",
+      "macro": "projects.html",
+      "content": [
+        {
+          "title": "Microwave Imaging with Time-Reversal Algorithm",
+          "field": "Electromagnetics",
+          "description": "Software implementation of a computational method for microwave imaging using time-reversal algorithm for medical imaging, especially for early-period diagnosis of breast cancer tumors",
+          "detail": "2018-2019, Graduation Project"
+        },
+        {
+          "title": "Async Stream Cipher with LFSR",
+          "field": "Embedded Systems",
+          "description": "FPGA implementation of self-synchronizing stream cipher with linear feedback shift register using PicoBlaze Microprocessor",
+          "detail": "2018"
+        },
+        {
+          "title": "Special Purpose Processor",
+          "field": "Digital System Design",
+          "description": "Design, simulation and implementation of a special purpose processor for real-time digital signal processing",
+          "detail": "2018"
+        },
+        {
+          "title": "Image Colorization",
+          "field": "Machine Learning",
+          "description": "Automated colorization of grayscale images using convolutional neural networks",
+          "detail": "2018"
+        },
+        {
+          "title": "KCPSM3 Wrapper",
+          "field": "Programming",
+          "description": "This is a Python program that automates KCPSM3 Assembler with executing DosBox at the background and can be called from Xilinx ISE Tcl console",
+          "detail": "2018"
+        },
+        {
+          "title": "Window Function Generator",
+          "field": "Embedded Systems",
+          "description": "Design of a configurable window function generator to be used for real-time spectral analysis on FPGAs",
+          "detail": "2018"
+        }
+      ]
+    }
+  ]
+}
