@@ -31,7 +31,7 @@ def resume():
             error = "Invalid JSON data!"
             cv = default
     pretty = json.dumps(cv, indent=4)
-    return render_template('edit.html', json=pretty, error=error, **cv)
+    return render_template('edit.html', json=pretty, error=error, message="", **cv)
 
 
 if __name__ == '__main__':

@@ -19,7 +19,7 @@
 }
 
 
-.data {
+textarea {
     font-size: 12px;
     position: relative;
     left: 0;
@@ -45,6 +45,15 @@
     border-radius: 5px;
     color: white;
     margin: 1px;
+    height: 24px;
+}
+
+textarea,
+input,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
 }
 
 @media print {

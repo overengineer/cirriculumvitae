@@ -2,31 +2,24 @@
 {% block head %}
 {{ super() }}
 <link rel="stylesheet" href="/static/styles/edit.css">
-<script>
-    function toggle_panel (button,id) {
-		panel=document.getElementById(id);
-		panel.hidden=!panel.hidden;
-		if (panel.hidden) {
-			button.value = "\u25BC";
-		} else {
-			button.value= "\u25B2";
-		}
-	}
-</script>
+<script type="text/javascript" src="{{url_for('static', filename='js/edit.js')}}"></script>
 {% endblock %}
 {% block body %}
 <div class="edit">
     <div class="error">{{ error }}</div>
     <div class="message">{{ message }}</div>
-    <input type="button" class="arrow" onclick="toggle_panel(this,'hide')" value="&#x25B2">
+    <input type="button" class="arrow" onclick="togglePanel(this,'hide')" value="&#x25B2">
     <input type="button" class="button" style="float:right" onclick="window.print();return false;" value="print" />
     <div>
         <form action="/edit" method="POST">
-            <input type="submit" value="render" class="button" style="float:right">
+            <div>
+                <input type="submit" value="render" class="button" style="float:right">
+                <input type="file" value="import JSON" multiple="false" accept="application/json,.json" class="button" style="float:right" onchange="readTextFile(event,'data')">
+            </div>
             <div id="hide">
                 <input type="hidden" method="GET" value="1">
                 <div class="explanation">paste json content here</div>
-                <textarea name="data" class="data" placeholder="paste json content here" required>
+                <textarea name="data" id="data" placeholder="paste json content here" required>
 {{ json }}
 </textarea>
             </div>
