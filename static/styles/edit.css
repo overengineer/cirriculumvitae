@@ -18,9 +18,14 @@
     overflow: auto;
 }
 
+
 .data {
-    width: 700px;
+    position: relative;
+    left: 0;
+    right: 0;
     height: 200px;
+    min-width: 835px;
+    min-width: -moz-available;
     color: green;
 }
 
