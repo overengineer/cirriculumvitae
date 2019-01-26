@@ -13,14 +13,25 @@ app = Flask(__name__)
 
 @app.route('/')
 def root():
-    return redirect('/cv')
+    return redirect('/edit')
 
 
-@app.route('/cv')
+@app.route('/edit', methods=['GET', 'POST'])
 def resume():
+    error = ""
     with open('./virtual/resume.json') as f:
-        cv = json.load(f)
-    return render_template('resume.html', **cv)
+        default = json.load(f)
+
+    if request.method == 'GET':
+        cv = default
+    else:
+        try:
+            cv = json.loads(request.form.get('data'))
+        except:
+            error = "Invalid JSON data!"
+            cv = default
+    pretty = json.dumps(cv, indent=4)
+    return render_template('edit.html', json=pretty, error=error, **cv)
 
 
 if __name__ == '__main__':

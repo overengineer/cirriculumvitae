@@ -1,0 +1,37 @@
+{% extends "resume.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="/static/styles/edit.css">
+<script>
+    function toggle_panel (button,id) {
+		panel=document.getElementById(id);
+		panel.hidden=!panel.hidden;
+		if (panel.hidden) {
+			button.value = "\u25BC";
+		} else {
+			button.value= "\u25B2";
+		}
+	}
+</script>
+{% endblock %}
+{% block body %}
+<div class="edit">
+    <div class="error">{{ error }}</div>
+    <div class="message">{{ message }}</div>
+    <input type="button" class="arrow" onclick="toggle_panel(this,'hide')" value="&#x25B2">
+    <form action="/edit" method="POST">
+        <div id="hide">
+            <input type="hidden" method="GET" value="1">
+            <div class="explanation">paste json content here</div>
+            <textarea name="data" class="data" placeholder="paste json content here" required>
+{{ json }}
+</textarea>
+            <input type="submit" value="render" class="button">
+    </form>
+</div>
+</div>
+
+<div class="view">
+    {{ super() }}
+</div>
+{% endblock %}

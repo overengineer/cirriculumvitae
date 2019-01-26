@@ -1,0 +1,43 @@
+.message {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+.explanation {
+    color: gray;
+}
+
+.edit {
+    background-color: gold;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    overflow: auto;
+}
+
+.data {
+    width: 750px;
+    height: 200px;
+    color: green;
+}
+
+.arrow {
+    float: right;
+    color: darkorange;
+    background-color: #0000;
+    border-color: #0000;
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    background-color: darkorange;
+    border-color: #0000;
+    border-radius: 5px;
+    color: white;
+}
+
+.view {}
