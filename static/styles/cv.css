@@ -95,6 +95,10 @@
         /*margin: 0px 15px 0px 5px;*/
     }
 
+    .cls_header {
+        overflow: auto;
+    }
+
     /* CONTENT */
     .cls_section {
         font-family: Arial, serif;

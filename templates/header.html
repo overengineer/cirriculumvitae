@@ -1,18 +1,18 @@
 {% from "macros.html" import multiline as multiline %}
 <div class="row" style="margin-top:30px;">
-    <div class="column" style="width:600px;">
+    <div class="column" style="width:600px; max-width:80vw;">
         <div class="cls_container">
             <div class="cls_profile">
-                <img src="{{ image }}" />
+                <img src="{{ image }}">
             </div>
-            <div>
+            <div class="cls_header">
                 <div class="cls_item"><span class="cls_name">{{ name }}</span></div>
                 <div class="cls_item"><span class="cls_title">{{ multiline(title) }}</span></div>
                 <div class="cls_item"><span class="cls_vision">{{ multiline(vision) }}</span></div>
             </div>
         </div>
     </div>
-    <div class="column" style="width:150px; float:right; margin-right: 10px;">
+    <div class="column" style="width:150px; max-width:20vw; float:right; margin-right: 10px;">
         {% from "contact.html" import render_contact as render %}
         {% for contact in contacts %}
         {{ render(contact) }}

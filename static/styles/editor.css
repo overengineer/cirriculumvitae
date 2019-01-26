@@ -18,6 +18,9 @@
     overflow: auto;
 }
 
+#hide {
+    margin-right: 2px;
+}
 
 textarea {
     font-size: 12px;
@@ -41,12 +44,13 @@ textarea {
 
 .button {
     background-color: darkorange;
-    border-color: #0000;
     border-radius: 5px;
+    border-color: white;
     color: white;
     margin: 1px;
     height: 24px;
 }
+
 
 textarea,
 input,
