@@ -10,21 +10,29 @@
     color: gray;
 }
 
-.edit {
+#edit {
     background-color: gold;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px;
     font-size: 12px;
-    overflow: auto;
+    overflow-x: hidden;
 }
 
-#hide {
-    margin-right: 2px;
+
+#hide-vertical {
+    margin-right: 6px;
+    display: block;
+}
+
+
+#hide-horiztontal {
+    display: block;
 }
 
 textarea {
     font-size: 12px;
     position: relative;
+    resize: none;
     left: 0;
     right: 0;
     height: 30vh;
@@ -42,6 +50,16 @@ textarea {
     margin: 0;
     padding: 0;
 }
+
+#arrow-vertical {
+    display: block;
+}
+
+#arrow-horizontal {
+    position: absolute;
+    display: none;
+}
+
 
 .button {
     background-color: darkorange;
@@ -62,9 +80,62 @@ select {
 }
 
 @media print {
-    .edit {
+    #edit {
         display: none;
         hidden: true;
         visible: false;
+    }
+}
+
+
+@media only screen and (min-width: 1500px) {
+    #edit {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 600px;
+        height: 95vh;
+        overflow: hidden;
+        border: none;
+        border-bottom-width: 10px;
+        border-style: solid;
+        border-color: gold;
+    }
+
+    #arrow-vertical {
+        display: none;
+    }
+
+    #arrow-horizontal {
+        position: absolute;
+        display: block;
+    }
+
+    #hide-vertical {
+        display: block;
+    }
+
+    #hide-horizontal {
+        display: block;
+    }
+
+
+    textarea {
+        position: absolute;
+        resize: none;
+        top: 40px;
+        left: 5px;
+        height: 100%;
+        min-width: 97.5%;
+        max-width: 97.5;
+    }
+
+
+    #view {
+        position: absolute;
+        top: 0;
+        left: 600px;
+        min-height: 1200px;
+        max-width: 848px;
     }
 }
