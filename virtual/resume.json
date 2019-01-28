@@ -215,6 +215,12 @@
           "detail": "2018-2019, Graduation Project"
         },
         {
+          "title": "CV Generator",
+          "field": "Programming",
+          "description": "This is a web application that renders resumes from JSON data to HTML and PDF using Jinja Template Engine",
+          "detail": "2019"
+        },
+        {
           "title": "Async Stream Cipher with LFSR",
           "field": "Embedded Systems",
           "description": "FPGA implementation of self-synchronizing stream cipher with linear feedback shift register using PicoBlaze Microprocessor",
