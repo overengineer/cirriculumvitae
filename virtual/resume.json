@@ -44,7 +44,7 @@
   "left": [
     {
       "title": "EDUCATION",
-      "macro": "experience.html",
+      "macro": "experience",
       "content": [
         {
           "title": "Undergraduate",
@@ -56,7 +56,7 @@
     },
     {
       "title": "EXPERIENCE",
-      "macro": "experience.html",
+      "macro": "experience",
       "content": [
         {
           "title": "Intern",
@@ -80,7 +80,7 @@
     },
     {
       "title": "SKILLS",
-      "macro": "skills.html",
+      "macro": "skills",
       "content": [
         {
           "category": "Fields",
@@ -172,7 +172,7 @@
     },
     {
       "title": "LANGUAGES",
-      "macro": "languages.html",
+      "macro": "languages",
       "content": [
         {
           "language": "Turkish",
@@ -188,25 +188,25 @@
   "right": [
     {
       "title": "AREAS OF INTEREST",
-      "macro": "areas.html",
+      "macro": "areas",
       "content": [
         {
           "title": "Embedded Systems",
-          "detail": "Microprocessor System Design, FPGA prototyping"
+          "detail": "Microprocessor System Design, FPGA Prototyping"
         },
         {
           "title": "Electromagnetics",
           "detail": "Antenna Design, Medical Imaging"
         },
         {
-          "title": "Artificial Intelligence",
-          "detail": "Computer Vision, Machine Learning, Deep Learning, CNN"
+          "title": "Computer Science",
+          "detail": "Programming Languages, Computer Vision, Machine Learning"
         }
       ]
     },
     {
       "title": "PROJECTS",
-      "macro": "projects.html",
+      "macro": "projects",
       "content": [
         {
           "title": "Microwave Imaging with Time-Reversal Algorithm",

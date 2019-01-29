@@ -13,7 +13,8 @@
             /*40px 20px 32px 20px;*/
             margin: 0;
             box-sizing: border-box;
-            border: 5px solid rgb(70, 143, 153);
+
+            border: 5px solid {{ theme }};
             -webkit-print-color-adjust: exact !important;
             /* Chrome, Safari */
             color-adjust: exact !important;
@@ -49,7 +50,8 @@
     .cls_title {
         font-family: Arial, serif;
         font-size: 15px;
-        color: rgb(70, 143, 153);
+
+        color: {{ theme }};
     }
 
     .cls_vision {
@@ -68,7 +70,8 @@
 
     a {
         position: relative;
-        color: rgb(70, 143, 153);
+
+        color: {{ theme }};
         font-style: normal;
     }
 
@@ -122,7 +125,8 @@
         font-family: Arial, serif;
         font-size: 12px;
         color: white;
-        background-color: rgb(70, 143, 153);
+
+        background-color: {{ theme }};
         border-radius: 5px;
         padding: 2px 5px 2px 5px;
         margin-right: 5px;
@@ -136,7 +140,8 @@
     .cls_detail {
         font-family: Arial, serif;
         font-size: 10em;
-        color: rgb(70, 143, 153);
+
+        color: {{ theme }};
     }
 
     .cls_project {
@@ -185,7 +190,8 @@
         margin-right: 8px;
         margin-bottom: 12px;
         padding-bottom: 7.0px;
-        border-bottom: 2.0px solid rgb(70, 143, 153);
+
+        border-bottom: 2.0px solid {{ theme }};
     }
 
     .cls_container:last-child {
@@ -204,7 +210,8 @@
         margin-right: 25px;
         margin-bottom: 15px;
         padding-bottom: 10.0px;
-        border-bottom: 2.5px solid rgb(70, 143, 153);
+
+        border-bottom: 2.5px solid {{ theme }};
     }
 
     /* Clear floats after the columns */

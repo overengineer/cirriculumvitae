@@ -1,4 +1,4 @@
-{% from "macros.html" import multiline as multiline %}
+{% from "util/macros.html" import multiline as multiline %}
 <div class="row" style="margin-top:30px;">
     <div class="column" style="width:600px; max-width:80vw;">
         <div class="cls_container">
@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="column" style="width:150px; max-width:20vw; float:right; margin-right: 10px;">
-        {% from "contact.html" import render_contact as render %}
+        {% from "macros/contact.html" import render_contact as render %}
         {% for contact in contacts %}
         {{ render(contact) }}
         {% endfor %}

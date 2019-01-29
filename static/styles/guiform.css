@@ -1,0 +1,15 @@
+#gui-form {
+    position: relative;
+    left: 0;
+    top: 40px;
+}
+
+#json-form {
+    position: relative;
+    top: 40px;
+}
+
+#gui-content {
+    position: relative;
+    top: 40px;
+}

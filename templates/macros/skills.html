@@ -1,0 +1,15 @@
+{% macro render_content(item) %}
+<div class="cls_item"><span class="cls_experience">{{ item.category }}</span></div>
+{% for box in item.boxes %}
+<div class="cls_boxes">
+    {% for skill in box %}
+    <span class="cls_skill">{{ skill }}</span>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% macro render_form() %}
+category: <input type="text" id="skills-form-category" placeholder="category"><br>
+skills: <textarea id="skills-form-items" placeholder="Seperate skills with commas. You can insert newline."></textarea>
+{% endmacro %}

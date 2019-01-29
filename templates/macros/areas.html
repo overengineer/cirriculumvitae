@@ -1,0 +1,9 @@
+{% macro render_content(item) %}
+<div class="cls_item"><span class="cls_field">{{ item.title }}</span></div>
+<div class="cls_item"><span class="cls_detail">{{ item.detail }}</span></div>
+{% endmacro %}
+
+{% macro render_form() %}
+field: <input type="text" id="areas-form-field" placeholder="field"><br>
+detail: <input type="text" id="areas-form-detail" placeholder=detail">
+{% endmacro %}

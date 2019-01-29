@@ -1,0 +1,13 @@
+{% macro render_contact(contact) %}
+<div class="cls_right">
+    <span class="cls_contact"><a href="{{contact.link}}">{{contact.text}}</a></span>
+    <span><a href="{{contact.icon}}"><img class="cls_icon" src="{{contact.icon}}"></a>
+    </span>
+</div>
+{% endmacro %}
+
+{% macro render_form() %}
+link: <input type="text" id="contact-form-link" placeholder="link"><br>
+text: <input type="text" id="contact-form-text" placeholder="text"><br>
+icon URL: <input type="text" id="contact-form-icon" placeholder="icon URL"><br>
+{% endmacro %}

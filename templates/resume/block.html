@@ -3,10 +3,10 @@
     <div class="cls_item">
         <span class="cls_section">{{item.title}}</span>
     </div>
-    {% from item.macro import render %}
+    {% from "macros/"+item.macro+".html" import render_content %}
 
     {% for child in item.content %}
-    {{ render(child) }}
+    {{ render_content(child) }}
     {% endfor %}
 
 </div>

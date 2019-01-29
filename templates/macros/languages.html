@@ -1,0 +1,11 @@
+{% macro render_content(item) %}
+<div class="cls_boxes">
+    <span class="cls_skill">{{ item.language }}</span>
+    <span class="cls_description">{{ item.description }}</span>
+</div>
+{% endmacro %}
+
+{% macro render_form() %}
+language: <input type="text" id="language-form-language" placeholder="language"><br>
+description: <textarea id="language-form-description" placeholder="description"></textarea>
+{% endmacro %}

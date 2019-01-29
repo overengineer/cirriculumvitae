@@ -29,7 +29,7 @@
     display: block;
 }
 
-textarea {
+#json-data {
     font-size: 12px;
     position: relative;
     resize: none;
@@ -120,7 +120,7 @@ select {
     }
 
 
-    textarea {
+    #json-data {
         position: absolute;
         resize: none;
         top: 40px;

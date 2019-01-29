@@ -1,0 +1,40 @@
+{% extends "editor/edit.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="/static/styles/guiform.css">
+<script type="text/javascript" src="{{url_for('static', filename='js/guiform.js')}}"></script>
+{% endblock head %}
+{% block hide %}
+
+{% from "util/macros.html" import multiline %}
+<div id="gui-form" style="clear:both">
+    <div>image URL: <input type="text" id="gui-image" value="{{image}}" onchange="updateJson('image',this.value)"></div>
+    <div>name: <input type="text" id="gui-name" value="{{name}}" onchange="updateJson('name',this.value)"></div>
+    <div>title: <textarea id="gui-title" onchange="updateJson('title',this.value.split('\n'))">{{ multiline(title, seperator="\n") }}</textarea></div>
+    <div>vision: <textarea id="gui-vision" onchange="updateJson('vision',this.value.split('\n'))">{{ multiline(vision, seperator="\n") }}</textarea></div>
+    <div id="gui-new">
+		<div>
+    section:
+        <select id="gui-select" onchange="changeContentForm(this.value)">
+            {% for section in sections %}
+			
+            <option class="gui-option" value="{{ section.title }}">
+                {{ section.title }}
+            </option>
+            {% endfor %}
+        </select>
+		</div>
+        {% for section in sections %}
+        <div class="gui-content" id="gui-{{ section.title }}" hidden=false>
+            {% from "macros/"+section.macro+".html" import render_form %}
+            {{ render_form() }}
+        </div>
+        {% endfor %}
+        <div><input type="button" id="gui-add" value="+" onclick="addJsonElement()"></div>
+    </div>
+</div>
+<div id="json-form">
+    {{ super() }}
+</div>
+
+{% endblock hide %}

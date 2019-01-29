@@ -4,16 +4,19 @@
 <head>
     {% block head %}
     <title>CV Generator</title>
-    <link rel="stylesheet" href="/static/styles/cv.css">
+    {#
+    <link rel="stylesheet" href="/static/styles/cv.css">#}
+    {% from "util/macros.html" import include_in_tags with context %}
+    {{ include_in_tags("style","resume/cv.css") }}
     {% endblock %}
 </head>
 
 
 <body>
     {% block body %}
-    {% include "header.html" %}
+    {% include "resume/header.html" %}
     <div class="row" style="padding-bottom:18px;">
-        {% from "block.html" import render_block %}
+        {% from "resume/block.html" import render_block %}
         <div class="column">
             {% for item in left %}
             {{ render_block(item) }}

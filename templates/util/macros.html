@@ -1,0 +1,13 @@
+{% macro multiline(lines, seperator="<br>") %}
+{% if lines is not string %}
+{% for line in lines[0:-1] %}{{ line + seperator|safe }}{% endfor %}{{ lines[-1] }}
+{% else %}
+{{ lines }}
+{% endif %}
+{% endmacro %}
+
+{% macro include_in_tags(tag, source) %}
+<{{tag}}>
+    {% include source %}
+</{{tag}}>
+{% endmacro %}
