@@ -73,10 +73,10 @@
 		checkbox.checked=check;
 		if(check) {
 			autobutton.value="autocolor \u2713";
-			autobutton.style["background-color"]="darkorange";
-			colorbutton.style["background-color"]="dimgray";
+			autobutton.style["background-color"]="darkslategray";
+			colorbutton.style["background-color"]="darkorange";
 		}else{
-			autobutton.style["background-color"]="dimgray";
+			autobutton.style["background-color"]="darkorange";
 			autobutton.value="autocolor \u274C";
 			colorbutton.style["background-color"]=colorinput.value;
 		}
