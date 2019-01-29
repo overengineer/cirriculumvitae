@@ -15,7 +15,7 @@
     border-radius: 5px;
     padding: 8px;
     font-size: 12px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
@@ -95,7 +95,7 @@ select {
         top: 0;
         left: 0;
         width: 700px;
-        height: 95vh;
+        height: 100%;
         overflow: hidden;
         border: none;
         border-bottom-width: 10px;

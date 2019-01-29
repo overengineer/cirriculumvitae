@@ -10,6 +10,8 @@
 		}
 	}
 
+
+
     function togglePanelHorizontal (button) {
 		console.log(button)
 		hide=document.getElementById('hide-horizontal');

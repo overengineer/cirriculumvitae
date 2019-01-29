@@ -251,6 +251,15 @@
           "detail": "2018"
         }
       ]
-    }
+    },
+	{
+		"title": "HOBBIES",
+		"macro": "hobbies",
+		"content": [[
+			"swimming",
+			"trekking",
+			"digital arts"
+		]]
+	}
   ]
 }

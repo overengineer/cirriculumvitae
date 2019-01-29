@@ -1,0 +1,11 @@
+{% macro render_content(item) %}
+<div class="cls_boxes">
+    {% for hobby in item %}
+    <span class="cls_hobby">{{ hobby }}</span>
+    {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro render_form() %}
+skills: <textarea id="hobbies-form-items" placeholder="Seperate skills with commas. You can insert newline."></textarea>
+{% endmacro %}

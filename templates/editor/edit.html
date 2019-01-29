@@ -3,7 +3,13 @@
 {{ super() }}
 <link rel="stylesheet" href="/static/styles/editor.css">
 <script type="text/javascript" src="{{url_for('static', filename='js/edit.js')}}"></script>
-
+<script type="text/javascript" src="{{url_for('static', filename='js/export.js')}}"></script>
+<script>
+function exportJson(){
+var area = document.getElementById('json-data');
+saveTextAs(area.value,"cv.json");
+}
+</script>
 {% endblock head %}
 {% block body %}
 <div id="edit">
@@ -27,6 +33,7 @@
 
                     <input type="submit" value="render" class="button">  					<input type="reset" value="reset" class="button" onclick="autoColorReset()">
 					<input type="button" value="reload" class="button" onclick="reloadPage()">
+					<input type="button" value="export" class="button" onclick="exportJson()">
 					<input type="button" value="import" class="button" onclick="importJson()">
                     <input type="button" value="select color" id="color-button" class="button" style="background-color:{{ theme }}" onclick="colorSelect()">
                     <input type="button" value="autocolor &#x274C" id="autocolor-button" class="button" onclick="autoColorToggle()" style="background-color:darkorange" >
