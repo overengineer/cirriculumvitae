@@ -24,6 +24,7 @@
 			size: 848px 1132px;
 		}
         body {
+			position: absolute;
             background-color: white;
             width: 848px;
             height: 1132px;
@@ -39,6 +40,35 @@
             /*Firefox*/
         }
     }
+
+@-moz-document url-prefix() {
+	@media print {
+	/* Firefox */
+		@page {
+        position: absolute;
+        margin: 0;
+			width: 848px;
+			height: auto;
+		}
+        body {
+            background-color: white;
+			width: 848px;
+			height: auto;
+            padding: 0;
+            /*40px 20px 32px 20px;*/
+            margin: 0;
+            box-sizing: border-box;
+
+            border: none;
+            -webkit-print-color-adjust: exact !important;
+            /* Chrome, Safari */
+            color-adjust: exact !important;
+            /*Firefox*/
+        }
+    }
+}
+
+	
 
 
 
