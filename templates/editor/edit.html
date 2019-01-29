@@ -3,6 +3,21 @@
 {{ super() }}
 <link rel="stylesheet" href="/static/styles/editor.css">
 <script type="text/javascript" src="{{url_for('static', filename='js/edit.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/color-thief.js')}}"></script>
+<script>
+function autoColor(image) {
+try{
+image=document.getElementById('profile-image');
+var color;                
+var colorThief = new ColorThief();
+color=colorThief.getColor(image);
+console.log(color)
+document.getElementById("theme-color").value=color;
+}catch{
+console.log('auto-color failed');
+}
+}
+</script>
 {% endblock head %}
 {% block body %}
 <div id="edit">
@@ -26,7 +41,8 @@
                 <div>
                     <input type="submit" value="render" class="button" style="float:right">
                     <input type="file" value="import JSON" multiple="false" accept="application/json,.json" class="button" style="float:right" onchange="readTextFile(event,'data')">
-                    <input type="color" value="{{ theme }}" class="button" name="color" style="float:right">			
+                    <input type="color" value="{{ theme }}" class="button" name="color" id="theme-color" style="float:right">	
+                    <input type="button" value="auto-color" class="button"  id="auto-color" style="float:right" onclick="autoColor()">			
                 </div>
                 <div id="hide-vertical">
                     {% block hide %}
