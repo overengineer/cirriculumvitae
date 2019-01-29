@@ -7,8 +7,10 @@ import json
 import unicodedata
 from glob import glob
 import os
+import urllib.request
 from datetime import datetime
 from utils import *
+from colorthief import ColorThief
 
 app = Flask(__name__)
 
@@ -35,6 +37,7 @@ def root():
 def resume():
     error = ""
     theme = "#468F99"
+    autocolor = False
     with open('./virtual/resume.json') as f:
         default = json.load(f)
     if request.method == 'GET':
@@ -42,12 +45,26 @@ def resume():
     else:
         try:
             cv = json.loads(request.form.get('data'))
-            theme = request.form.get('color')
         except:
             error = "Invalid JSON data!"
+            print(error)
             cv = default
+        try:
+            theme = request.form.get('color')
+            autocolor = bool(request.form.get('autocolor'))
+            if autocolor:
+                urllib.request.urlretrieve(
+                    cv["image"], "temp")
+                color_thief = ColorThief("temp")
+                color = color_thief.get_color()
+                color = normalize_brightness(color)
+                theme = rgb2hex(color)
+        except Exception as e:
+            error = "auto-color failed"
+            print(error+" : \n"+str(e))
+            theme = "#468F99"
     pretty = json.dumps(cv, indent=4)
-    return render_template('editor/edit.html', json=pretty, error=error, message="", theme=theme, **cv)
+    return render_template('editor/edit.html', json=pretty, error=error, message="", theme=theme, autocolor=autocolor, **cv)
 
 
 '''
