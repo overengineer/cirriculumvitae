@@ -25,6 +25,7 @@
 
                 <div>
   					<input type="reset" value="reset" class="button">
+					<input type="button" value="default" class="button" onclick="window.location.reload();">
                     <input type="submit" value="render" class="button">
                     <input type="file" value="import JSON" multiple="false" accept="application/json,.json" class="button" onchange="readTextFile(event,'data')">
                     <input type="color" value="{{ theme }}" class="button" name="color" id="theme-color" >	
