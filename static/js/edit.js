@@ -61,6 +61,16 @@
 		button.style["background-color"]=caller.value;
 }
 
+	function autoColorUpdate() {
+		checkbox = document.getElementById("auto-color");
+		autoColorSet(checkbox,checkbox.checked);
+}
+
+	function autoColorReset() {
+		checkbox = document.getElementById("auto-color");
+		autoColorSet(checkbox,false);
+}
+
 	function autoColorToggle() {
 		checkbox = document.getElementById("auto-color");
 		autoColorSet(checkbox,!checkbox.checked);
