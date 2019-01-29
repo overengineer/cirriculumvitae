@@ -81,4 +81,6 @@
 			colorbutton.style["background-color"]=colorinput.value;
 		}
 		}
+window.onload=function(){
+		checkbox = document.getElementById("auto-color");autoColorSet(checkbox,checkbox.checked)}
 
