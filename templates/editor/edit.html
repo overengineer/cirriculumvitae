@@ -29,7 +29,7 @@
 					<input type="button" value="reload" class="button" onclick="reloadPage()">
 					<input type="button" value="import" class="button" onclick="importJson()">
                     <input type="button" value="select color" id="color-button" class="button" style="background-color:{{ theme }}" onclick="colorSelect()">
-                    <input type="button" value="autocolor &#x274C" id="autocolor-button" class="button" onclick="autoColorToggle()" style="background-color:#c08000">
+                    <input type="button" value="autocolor &#x274C" id="autocolor-button" class="button" onclick="autoColorToggle()" style="background-color:dimgray">
 										
                     <input type="file" id="input-file" value="import JSON" multiple="false" accept="application/json,.json" onchange="readTextFile(event,'data')" style="display:none">
                     <input type="color" value="{{ theme }}" name="color" id="theme-color" style="display:none" onchange="colorUpdate(this)">	

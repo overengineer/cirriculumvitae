@@ -74,9 +74,9 @@
 		if(check) {
 			autobutton.value="autocolor \u2713";
 			autobutton.style["background-color"]="darkorange";
-			colorbutton.style["background-color"]="#c08000";
+			colorbutton.style["background-color"]="dimgray";
 		}else{
-			autobutton.style["background-color"]="#c08000";
+			autobutton.style["background-color"]="dimgray";
 			autobutton.value="autocolor \u274C";
 			colorbutton.style["background-color"]=colorinput.value;
 		}
