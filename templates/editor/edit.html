@@ -26,10 +26,14 @@
                 <div>
 
                     <input type="submit" value="render" class="button">  					<input type="reset" value="reset" class="button">
-					<input type="button" value="reload" class="button" onclick="reload()">
-                    <input type="file" value="import JSON" multiple="false" accept="application/json,.json" class="button" onchange="readTextFile(event,'data')">
-                    <input type="color" value="{{ theme }}" class="button" name="color" id="theme-color" >	
-                    <span class="button"><span style="color:darkorange">a</span>autocolor<input type="checkbox" name="autocolor" id="auto-color" {{ "checked" if autocolor }} ></span>
+					<input type="button" value="reload" class="button" onclick="reloadPage()">
+					<input type="button" value="import" class="button" onclick="importJson()">
+                    <input type="button" value="select color" id="color-button" class="button" style="background-color:{{ theme }}" onclick="colorSelect()">
+                    <input type="button" value="autocolor &#x274C" id="autocolor-button" class="button" onclick="autoColorToggle()" style="background-color:#c08000">
+										
+                    <input type="file" id="input-file" value="import JSON" multiple="false" accept="application/json,.json" onchange="readTextFile(event,'data')" style="display:none">
+                    <input type="color" value="{{ theme }}" name="color" id="theme-color" style="display:none" onchange="colorUpdate(this)">	
+                    <input type="checkbox" name="autocolor" id="auto-color" {{ "checked" if autocolor }} style="display:none">
                     			
                 </div>
                 <div id="hide-vertical">

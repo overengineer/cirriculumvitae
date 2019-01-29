@@ -41,7 +41,44 @@
         reader.readAsText(input.files[0]);
       };
 
-	function reload() {
+	function reloadPage() {
 		window.location.replace(location.pathname);
 	}
+
+	function importJson() {
+		document.getElementById("input-file").click();
+	}
+
+	function colorSelect() {
+		checkbox = document.getElementById("auto-color");
+		document.getElementById("theme-color").click();
+		autoColorSet(checkbox,false);
+}
+
+	function colorUpdate(caller) {
+		button = document.getElementById("color-button");
+		button = document.getElementById("color-button");
+		button.style["background-color"]=caller.value;
+}
+
+	function autoColorToggle() {
+		checkbox = document.getElementById("auto-color");
+		autoColorSet(checkbox,!checkbox.checked);
+	}
+
+	function autoColorSet(checkbox,check) {
+		autobutton = document.getElementById("autocolor-button");
+		colorbutton = document.getElementById("color-button");
+		colorinput=document.getElementById("theme-color");
+		checkbox.checked=check;
+		if(check) {
+			autobutton.value="autocolor \u2713";
+			autobutton.style["background-color"]="darkorange";
+			colorbutton.style["background-color"]="#c08000";
+		}else{
+			autobutton.style["background-color"]="#c08000";
+			autobutton.value="autocolor \u274C";
+			colorbutton.style["background-color"]=colorinput.value;
+		}
+		}
 
