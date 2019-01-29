@@ -1,20 +1,38 @@
-    * {
+
+    
+        * {
         -webkit-print-color-adjust: exact !important;
         /* Chrome, Safari */
         color-adjust: exact !important;
         /*Firefox*/
     }
 
-    @media print {
+
+    @media screen {
+        body {
+            min-height: 1132px;
+            max-width: 848px;
+            background-color: white;
+        }
+    }
+
+	@media print {
+	/* Chrome, Safari */
+		@page {
+        position: absolute;
+        margin: 0;
+			size: 848px 1132px;
+		}
         body {
             background-color: white;
             width: 848px;
+            height: 1200px;
             padding: 0;
             /*40px 20px 32px 20px;*/
             margin: 0;
             box-sizing: border-box;
 
-            border: 5px solid {{ theme }};
+            border: 5px solid #468F99;
             -webkit-print-color-adjust: exact !important;
             /* Chrome, Safari */
             color-adjust: exact !important;
@@ -22,24 +40,7 @@
         }
     }
 
-    @media screen {
-        body {
-            min-height: 1200px;
-            max-width: 848px;
-            background-color: white;
-        }
-    }
 
-    @page {
-        position: absolute;
-        margin: 0;
-        height: 1200px;
-        width: 848px;
-        -webkit-print-color-adjust: exact !important;
-        /* Chrome, Safari */
-        color-adjust: exact !important;
-        /*Firefox*/
-    }
 
     /* HEADER */
     .cls_name {
@@ -51,7 +52,7 @@
         font-family: Arial, serif;
         font-size: 15px;
 
-        color: {{ theme }};
+        color: #468F99;
     }
 
     .cls_vision {
@@ -71,7 +72,7 @@
     a {
         position: relative;
 
-        color: {{ theme }};
+        color: #468F99;
         font-style: normal;
     }
 
@@ -126,7 +127,7 @@
         font-size: 12px;
         color: white;
 
-        background-color: {{ theme }};
+        background-color: #468F99;
         border-radius: 5px;
         padding: 2px 5px 2px 5px;
         margin-right: 5px;
@@ -141,7 +142,7 @@
         font-family: Arial, serif;
         font-size: 10em;
 
-        color: {{ theme }};
+        color: #468F99;
     }
 
     .cls_project {
@@ -191,7 +192,7 @@
         margin-bottom: 12px;
         padding-bottom: 7.0px;
 
-        border-bottom: 2.0px solid {{ theme }};
+        border-bottom: 2.0px solid #468F99;
     }
 
     .cls_container:last-child {
@@ -211,7 +212,7 @@
         margin-bottom: 15px;
         padding-bottom: 10.0px;
 
-        border-bottom: 2.5px solid {{ theme }};
+        border-bottom: 2.5px solid #468F99;
     }
 
     /* Clear floats after the columns */
@@ -220,3 +221,5 @@
         display: table;
         clear: both;
     }
+
+
