@@ -41,3 +41,7 @@
         reader.readAsText(input.files[0]);
       };
 
+	function reload() {
+		window.location.replace(location.pathname);
+	}
+

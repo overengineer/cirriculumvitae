@@ -89,12 +89,12 @@ select {
 }
 
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1600px) {
     #edit {
         position: absolute;
         top: 0;
         left: 0;
-        width: 600px;
+        width: 700px;
         height: 95vh;
         overflow: hidden;
         border: none;
@@ -135,7 +135,7 @@ select {
     #view {
         position: absolute;
         top: 0;
-        left: 600px;
+        left: 700px;
         min-height: 1200px;
         max-width: 848px;
     }
