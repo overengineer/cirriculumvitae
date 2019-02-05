@@ -42,6 +42,16 @@
         };
         reader.readAsText(input.files[0]);
       };
+function isValidJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
+
 
 	function reloadPage() {
 		window.location.replace(location.pathname);

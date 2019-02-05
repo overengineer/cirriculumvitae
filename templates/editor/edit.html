@@ -5,9 +5,21 @@
 <script type="text/javascript" src="{{url_for('static', filename='js/edit.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static', filename='js/export.js')}}"></script>
 <script>
-function exportJson(){
-var area = document.getElementById('json-data');
-saveTextAs(area.value,"cv.json");
+var jsonBackup;
+
+
+function validateJson(caller){
+	if(isValidJsonString(caller.innerText)){
+		window.jsonBackup=caller.value;
+	}else{
+		caller.value=window.jsonBackup;
+		alert('invalid json');
+	}
+	console.log(window.jsonBackup);
+} 
+
+window.onload = function() {
+	window.jsonBackup = document.getElementById('json-data').value;
 }
 </script>
 {% endblock head %}
@@ -50,7 +62,7 @@ saveTextAs(area.value,"cv.json");
 	        			<div class="message">{{ message }}</div>
 					</div>
 					<div>
-                    	<textarea name="data" id="json-data" placeholder="paste json content here" required>
+                    	<textarea name="data" id="json-data" placeholder="paste json content here" onload="validateJson( this)" onchange="validateJson(this)" required>
 						{{ json }}
 						</textarea>
 					</div>
