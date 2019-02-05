@@ -32,8 +32,11 @@
             /*40px 20px 32px 20px;*/
             margin: 0;
             box-sizing: border-box;
-
+			{% if border %}
             border: 5px solid {{ theme }};
+			{% else %}
+			border: none;
+			{% endif %}
             -webkit-print-color-adjust: exact !important;
             /* Chrome, Safari */
             color-adjust: exact !important;

@@ -20,6 +20,7 @@ function validateJson(caller){
 
 window.onload = function() {
 	window.jsonBackup = document.getElementById('json-data').value;
+	console.log("{{ border }}")
 }
 </script>
 {% endblock head %}
@@ -53,6 +54,8 @@ window.onload = function() {
                     <input type="file" id="input-file" value="import JSON" multiple="false" accept="application/json,.json" onchange="readTextFile(event,'json-data')" style="display:none">
                     <input type="color" value="{{ theme }}" name="color" id="theme-color" style="display:none" onchange="colorUpdate(this)">	
                     <input type="checkbox" name="autocolor" id="auto-color" {{ "checked" if autocolor }} style="display:none" onchange="autoColorUpdate()">
+					<input type="checkbox" name="border" style="float:right" checked>
+					<label for="border" style="float:right">print page border</label>
                     			
                 </div>
                 <div id="hide-vertical">

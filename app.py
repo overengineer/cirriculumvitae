@@ -38,11 +38,14 @@ def resume():
     error = ""
     theme = "#468F99"
     autocolor = False
+    border = True
     with open('./virtual/resume.json') as f:
         default = json.load(f)
     if request.method == 'GET':
         cv = default
     else:
+        border = bool(request.form.get('border'))
+        autocolor = bool(request.form.get('autocolor'))
         try:
             cv = json.loads(request.form.get('data'))
         except:
@@ -51,7 +54,6 @@ def resume():
             cv = default
         try:
             theme = request.form.get('color')
-            autocolor = bool(request.form.get('autocolor'))
             if autocolor:
                 urllib.request.urlretrieve(
                     cv["image"], "temp")
@@ -64,7 +66,7 @@ def resume():
             print(error+" : \n"+str(e))
             theme = "#468F99"
     pretty = json.dumps(cv, indent=4)
-    return render_template('editor/edit.html', json=pretty, error=error, message="", theme=theme, autocolor=autocolor, **cv)
+    return render_template('editor/edit.html', json=pretty, error=error, message="", theme=theme, border=border, autocolor=autocolor, **cv)
 
 
 '''
