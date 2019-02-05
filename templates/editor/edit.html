@@ -9,7 +9,7 @@ var jsonBackup;
 
 
 function validateJson(caller){
-	if(isValidJsonString(caller.innerText)){
+	if(isValidJsonString(caller.value)){
 		window.jsonBackup=caller.value;
 	}else{
 		caller.value=window.jsonBackup;
@@ -20,7 +20,9 @@ function validateJson(caller){
 
 window.onload = function() {
 	window.jsonBackup = document.getElementById('json-data').value;
-	console.log("{{ border }}")
+	{% if error != "" %}
+	alert("{{error}}");
+	{% endif %}
 }
 </script>
 {% endblock head %}
@@ -60,10 +62,6 @@ window.onload = function() {
                 </div>
                 <div id="hide-vertical">
                     {% block hide %}
-        			<div style="left:15px;">
-						<div class="error">{{ error }}</div>
-	        			<div class="message">{{ message }}</div>
-					</div>
 					<div>
                     	<textarea name="data" id="json-data" placeholder="paste json content here" onload="validateJson( this)" onchange="validateJson(this)" required>
 						{{ json }}

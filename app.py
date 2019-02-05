@@ -66,7 +66,11 @@ def resume():
             print(error+" : \n"+str(e))
             theme = "#468F99"
     pretty = json.dumps(cv, indent=4)
-    return render_template('editor/edit.html', json=pretty, error=error, message="", theme=theme, border=border, autocolor=autocolor, **cv)
+    try:
+        return render_template('editor/edit.html', json=pretty, error=error, theme=theme, border=border, autocolor=autocolor, **cv)
+    except:
+        pretty = json.dumps(default, indent=4)
+        return render_template('editor/edit.html', json=pretty, error="render failed", theme=theme, border=border, autocolor=autocolor, **default)
 
 
 '''
